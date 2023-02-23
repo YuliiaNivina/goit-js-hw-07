@@ -14,25 +14,22 @@ galleryEl.addEventListener("click", onClickGalleryItem);
 function createGalleryMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
-      return `<div class="gallery__item">
+      return `
   <a class="gallery__item" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
-      data-source="${original}"
       alt="${description}"
     />
-  </a>
-</div>`;
+  </a>`;
     })
     .join("");
 }
 
 function onClickGalleryItem(evt) {
   evt.preventDefault();
-
+}
   var lightbox = new SimpleLightbox(".gallery__item", {
     captionsData: "alt",
     captionDelay: 250,
   });
-}

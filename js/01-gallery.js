@@ -33,7 +33,10 @@ let instance = {};
 
 function onClickGalleryItem(evt) {
   evt.preventDefault();
-
+  
+  if (evt.target.nodeName !== "IMG") {
+  return
+}
   const imgUrl = evt.target.dataset.source;
 
   window.addEventListener("keydown", onEscModalClose);
