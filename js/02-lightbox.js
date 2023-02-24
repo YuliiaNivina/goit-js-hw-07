@@ -15,13 +15,15 @@ function createGalleryMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
-  <a class="gallery__item" href="${original}">
-    <img
-      class="gallery__image"
-      src="${preview}"
-      alt="${description}"
-    />
-  </a>`;
+      <li>
+        <a class="gallery__item" href="${original}">
+           <img
+           class="gallery__image"
+           src="${preview}"
+           alt="${description}"
+           />
+        </a>
+      </li>`;
     })
     .join("");
 }
@@ -29,7 +31,7 @@ function createGalleryMarkup(galleryItems) {
 function onClickGalleryItem(evt) {
   evt.preventDefault();
 }
-  var lightbox = new SimpleLightbox(".gallery__item", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
+var lightbox = new SimpleLightbox(".gallery__item", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
