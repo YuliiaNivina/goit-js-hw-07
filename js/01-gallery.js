@@ -56,5 +56,6 @@ function onEscModalClose(evt) {
     instance.close();
 
     window.removeEventListener("keydown", onEscModalClose);
+    console.log(evt);
   }
 }
