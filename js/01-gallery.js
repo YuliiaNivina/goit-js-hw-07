@@ -46,7 +46,8 @@ function onClickGalleryItem(evt) {
 `);
 
   instance.show();
-
+  
+console.log(evt);
   // console.log(imgUrl);
   // console.log(instance);
 }
